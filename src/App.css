@@ -1,0 +1,79 @@
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.deck-area {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.remaining-card {
+  width: 180px;
+  height: 280px;
+  background: #ddd;
+  margin-top: 2px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10;
+}
+
+.top-card {
+  background: red;
+  z-index: 50;
+}
+
+.discard-pile {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shown-card {
+  width: 180px;
+  height: 280px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.shown-card .top, .shown-card .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.shown-card .center {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.text-danger {
+  color: red;
+}
+
+.text-dark {
+  color: black;
+}
