@@ -1,17 +1,21 @@
+/* Import the Google font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 body {
   background-color: #222;
-  font-family: Arial, sans-serif;
+  font-family: 'Libre Baskerville', serif; /* Using a nicer font */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF; /* Set the default font color to white */
+  color: #FFF;
 }
 
 .container {
   position: relative;
   width: 200px;
   height: 600px;
+  background: linear-gradient(to bottom right, #2a2a2a, #3e3e3e); /* Gradient Background */
 }
 
 .deck-area, .discard-pile {
@@ -37,28 +41,18 @@ body {
 .remaining-card, .shown-card {
   width: 180px;
   height: 280px;
-  background: #444;  /* Darker card background */
+  background: linear-gradient(to bottom right, #555, #666); /* Gradient Card Background */
   margin-top: 2px;
   border-radius: 10px;
   position: absolute;
   transform-style: preserve-3d;
   perspective: 1000px;
+  transition: all 0.3s ease; /* Added transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added Shadow */
 }
 
 .shown-card {
-  width: 180px;
-  height: 280px;
-  background: #444;
-  margin-top: 2px;
-  border-radius: 10px;
-  position: absolute;
-  transform-style: preserve-3d;
-  perspective: 1000px;
   animation: flipAndMove 1s forwards;
-}
-
-.top-card {
-  background: #666; /* Slightly lighter for contrast */
 }
 
 .card-back, .card-front {
@@ -75,6 +69,8 @@ body {
 
 .card-back {
   background-color: #666;
+  /* placeholder */
+  /* background-image: url('path_to_your_subtle_pattern.png'); */
 }
 
 .card-front {
